@@ -73,8 +73,8 @@
 						<Bundle-Version>${project.version}</Bundle-Version>
 						<Export-Package>io.swagger.*</Export-Package>
 						<Import-Package>
-							org.slf4j,
-							javax.ws.rs
+							org.slf4j.*,
+							javax.ws.rs.*
 						</Import-Package>
 						<Bundle-ClassPath>.,{maven-dependencies}</Bundle-ClassPath>
 						<Embed-Dependency>*;scope=compile|runtime|provided;inline=false</Embed-Dependency>
