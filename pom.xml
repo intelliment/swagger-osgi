@@ -73,7 +73,8 @@
 						<Bundle-Version>${project.version}</Bundle-Version>
 						<Export-Package>io.swagger.*</Export-Package>
 						<Import-Package>
-							org.slf4j
+							org.slf4j,
+							javax.ws.rs
 						</Import-Package>
 						<Bundle-ClassPath>.,{maven-dependencies}</Bundle-ClassPath>
 						<Embed-Dependency>*;scope=compile|runtime|provided;inline=false</Embed-Dependency>
@@ -103,6 +104,12 @@
 			<groupId>io.swagger</groupId>
 			<artifactId>swagger-jaxrs</artifactId>
 			<version>${project.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.ws.rs</groupId>
+					<artifactId>jsr311-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 
